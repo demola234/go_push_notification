@@ -30,6 +30,7 @@ func main() {
 
 	// The registration token for the device to which you want to send the push notification.
 	token := "your-device-registration-token"
+	deviceTokens := []string{}
 
 	// The push notification payload.
 	payload := map[string]string{
@@ -43,8 +44,7 @@ func main() {
 			Title: "Congratulations!!",
 			Body:  "You have just implemented push notification",
 		},
-		// Token: deviceTokens,
-		// it's an array of device tokens
+		Tokens: deviceTokens,
 	})
 
 	if err1 != nil {
